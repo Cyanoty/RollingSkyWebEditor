@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling-Sky-Web-Editor</title>
+
+    <style>
+        body {
+            background-color: rgb(35, 35, 35);
+        }
+
+        span {
+            /* 让弹出来的文字不被选中，影响操作体验 */
+            user-select: none;
+            cursor: default;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            transition: 1s;
+        }
+
+        .title_1 {
+            padding-top: 50px;
+            font-size: 36px;
+            color: white;
+            margin: auto;
+            text-align: center;
+        }
+
+        .title_2 {
+            font-size: 24px;
+            color: white;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 10%;
+        }
+
+        .out_box {
+            border: 2px dashed rgb(192, 192, 192);
+            width: 800px;
+            height: 400px;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .in_box {
+            border: 2px solid rgba(184, 184, 184, 0.521);
+            width: 650px;
+            height: 100px;
+            justify-content: center;
+            margin: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        td {
+            color: white;
+            font-size: 24px;
+            margin: auto;
+            margin-top: 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .div_overflow {
+            overflow: scroll;
+            height: 250px;
+            width: auto;
+        }
+
+        .div_overflow::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .div_overflow::-webkit-scrollbar-thumb {
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        .font_inbox{
+            position: relative;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            margin-top: 6%;
+        }
+
+        .in_mid{
+            text-align: center;
+            margin: auto;
+            justify-content: center;
+        }
+
+        a{
+            position: relative;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            margin: auto;
+            text-decoration: underline dashed;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="title_1">Rolling-Sky</div>
+    <br>
+    <div class="title_2">Web-Editor</div>
+    <table class="out_box">
+        <tr class="in_mid">
+            <td class="in_mid">
+                <ul class="in_mid">
+                    <div class="div_overflow">
+                        <div class="in_box">
+                            <div class="font_inbox">
+                                <a target="_blank" href="error404/errorpage.html">Level-Editor</a>
+                            </div>
+                        </div>
+                        <div class="in_box">
+                            <div class="font_inbox">
+                                <a target="_blank" href="editor_assets/rolling-sky/tile-lookup/index.html">Geobuffer-Checker</a>
+                            </div>
+                        </div>
+                        <div class="in_box">
+                            <div class="font_inbox">
+                                <a target="_blank" href="editor_assets/rolling-sky/level-encryptor/index.html">Level-Encryptor</a>
+                            </div>
+                        </div>
+                        <div class="in_box">
+                            <div class="font_inbox">
+                                <a target="_blank" href="editor_assets/rolling-sky/theme-generator/index.html">Theme-Editor</a>
+                            </div>
+                        </div>
+                        <div class="in_box">
+                            <div class="font_inbox">
+                                <a target="_blank" href="editor_assets/rolling-sky/thumbnail-maker/index.html">Thumbnail-Maker</a>
+                            </div>
+                        </div>
+                        <div class="in_box">
+                            <div class="font_inbox">
+                                <a target="_blank" href="editor_assets/rolling-sky/colorsets/index.html">Color-Set</a>
+                            </div>
+                        </div>
+                        <div class="in_box">
+                            <div class="font_inbox">
+                                <a target="_blank" href="id_card/id_card.html">About ME</a>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        // 设置随机出现的文字数组
+        var arr = ["Hello", "I have No IDEA", "LMAO","IDK","功德+1"]
+        document.onclick = function (x) {
+            // 创建元素节点对象
+            var span = document.createElement("span")
+            // 获取当前鼠标的坐标
+            span.style.left = x.clientX + "px"
+            span.style.top = x.clientY + "px"
+            // 让span的值为arr数组内随机的一个值
+            span.innerHTML = arr[Math.floor(Math.random() * arr.length)]
+            // 设置span的动画效果
+            setTimeout(function () {
+                span.style.opacity = "1"
+                span.style.transform = "translateY(-100px)"
+            }, 100)
+            setTimeout(function () {
+                span.style.opacity = "0"
+                span.style.transform = "translateY(-230px)"
+            }, 1500)
+            // 清掉opacort为0的span
+            var chi = document.getElementsByClassName("span")
+            for (var i = 0; i < chi.length; i++) {
+                if (chi[i].style.opacity === "0") {
+                    document.body.removeChild(chi[i])
+                }
+            }
+            // 将span添加到body里
+            document.body.appendChild(span)
+        }
+    </script>
+</body>
+
+</html>

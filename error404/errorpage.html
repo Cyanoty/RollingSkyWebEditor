@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error404</title>
+    <style>
+        body {
+            background-color: rgb(75, 75, 75);
+        }
+
+        .font_title_1 {
+            text-align: center;
+            margin: auto;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+        }
+
+        span {
+            /* 让弹出来的文字不被选中，影响操作体验 */
+            user-select: none;
+            cursor: default;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="font_title_1">
+        <h3>
+            Oops!
+        </h3>
+        The page was not found ? !
+        頁面未找到 ! ?
+    </div>
+    <script>
+        // 设置随机出现的文字数组
+        var arr = ["Error","Error404","404","NOOOOOOO ! ! !"]
+        document.onclick = function (x) {
+            // 创建元素节点对象
+            var span = document.createElement("span")
+            // 获取当前鼠标的坐标
+            span.style.left = x.clientX + "px"
+            span.style.top = x.clientY + "px"
+            // 让span的值为arr数组内随机的一个值
+            span.innerHTML = arr[Math.floor(Math.random() * arr.length)]
+            // 设置span的动画效果
+            setTimeout(function () {
+                span.style.opacity = "1"
+                span.style.transform = "translateY(-100px)"
+            }, 100)
+            setTimeout(function () {
+                span.style.opacity = "0"
+                span.style.transform = "translateY(-230px)"
+            }, 1500)
+            // 清掉opacort为0的span
+            var chi = document.getElementsByClassName("span")
+            for (var i = 0; i < chi.length; i++) {
+                if (chi[i].style.opacity === "0") {
+                    document.body.removeChild(chi[i])
+                }
+            }
+            // 将span添加到body里
+            document.body.appendChild(span)
+        }
+    </script>
+</body>
+
+</html>
