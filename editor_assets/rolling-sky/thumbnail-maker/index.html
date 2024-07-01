@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- OwO -->
+<html>
+<head>
+<title>Rolling Sky 封面生成器</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="pagename" content="Rolling Sky Thumbnail Generator">
+<meta name="description" content="A tool to help generate thumbnails for Rolling Sky that can be used on websites like Youtube or BiliBili.">
+<meta property="og:image" content="https://sqdldev.github.io/rolling-sky/thumbnail-maker/webicon.png"/>
+<link rel="image_src" href="https://sqdldev.github.io/rolling-sky/thumbnail-maker/webicon.png">
+<script src="../../favicon.js"></script>
+<style>
+html {
+    background: #202124;
+	color: white;
+	position: absolute;
+    width: 100%;
+    margin: 0;
+}
+:root {
+	color-scheme: dark;
+}
+#canvas {
+    width: 100%;
+    max-width: 800px;
+}
+#canvasAlt {
+	display: none;
+}
+#gemrecolor {
+	display: none;
+}
+</style>
+<link rel="stylesheet" href="../global.css">
+<script src="../global.js"></script>
+</head>
+<body>
+<div style="margin: 15pt;">
+<h1>关卡视频封面制作</h1>
+<p>创作你所想要的关卡视频封面!</p>
+<form id="form" style="font-family: bold;">
+<h2>创建新封面</h2>
+<p><div>上传关卡封面图片(325×512 PNG/JPEG)</div><input id="cover" type="file" accept="image/png, image/jpeg">
+<p><div>上传关卡背景图片(512×512 PNG/JPEG)</div><input id="background" type="file" accept="image/png, image/jpeg">
+<p><div>关卡名称</div><input id="levelname" type="text" value="Level Name">
+<p><div>封面大小</div><input id="levelnamesize" type="range" min="25" max="150" value="100" class="slider" oninput="this.nextElementSibling.value = this.value + '%'">
+<output style="color: rgb(0, 255, 255); font-size: 20px;">100%</output>
+<p><div>是否添加皇冠</div><input type="radio" id="opt_crown_yes" name="opt_crown" value="true"><label for="opt_crown_yes" style="color: aqua;">是</label><br><input type="radio" id="opt_crown_no" name="opt_crown" value="false" checked><label for="opt_crown_no" style="color: red;">否</label>
+<p><div>钻石数量</div><input id="gems" type="number" value="10">
+<p><div>关卡名称的颜色</div><input id="levelnamecolor" type="color" value="#ecb766">
+<p><div>钻石数量颜色</div><input id="levelgemscolor" type="color" value="#75cfdc">
+<p><div>百分比颜色</div><input id="levelpercentcolor" type="color" value="#f8b74f">
+<p><div>百分比(阴影)颜色</div><input id="levelpercentshadowcolor" type="color" value="#0b878b">
+<p><div>百分比(阴影)透明度</div><input id="lpscalpha" type="range" min="0" max="100" value="100" class="slider" oninput="this.nextElementSibling.value = this.value">
+<output>100</output>
+<p><div>顶部方块明度</div><input id="topdarkness" type="range" min="0" max="50" value="10" class="slider" oninput="this.nextElementSibling.value = this.value">
+<output>10</output>
+<p><div>底部方块明度</div><input id="botdarkness" type="range" min="15" max="75" value="20" class="slider" oninput="this.nextElementSibling.value = this.value">
+<output>20</output>
+<p><div>背景图片明度</div><input id="bgdarkness" type="range" min="15" max="75" value="40" class="slider" oninput="this.nextElementSibling.value = this.value">
+<output>40</output>
+<!--<p><div>Vertical Padding</div><input id="padVert" type="range" min="0" max="50" value="0" class="slider" oninput="this.nextElementSibling.value = this.value">
+<output>0</output>-->
+<p><div>长款比</div><input id="padHoriz" type="range" min="0" max="256" value="0" class="slider" oninput="this.nextElementSibling.value = this.value">
+<output>0</output>
+<p><div>显示 "New" 按钮</div><input id="newlabel" type="checkbox" checked />
+<p><div>镜像</div><input id="flipcanvas" type="checkbox"/>
+<h2>上传已有工程</h2>
+<p><div>在此处上传</div><input id="uploadpreset" type="file" accept=".rsthumbnail">
+</form>
+<h1>下载封面</h1>
+<canvas id="canvas" width="1024" height="577"></canvas>
+<canvas id="canvasAlt" width="1024" height="577"></canvas>
+<p><button id="buttonDownload">下载图片(PNG)</button>
+<button id="buttonProj">下载工程(RSTHUMBNAIL)</button></p>
+<canvas id="gemrecolor" width="64" height="54"></canvas>
+</div>
+<script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</body>
