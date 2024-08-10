@@ -2,4 +2,3 @@
 
 ```C
 printf("HelloWorld");
-​```
