@@ -1,0 +1,15 @@
+{
+	"protocol_ver": 200027,
+	"data": {
+		"state": 1,
+		"prop": [
+			{"id": 12, "count": 69},
+			{"id": 1, "count": 69405},
+			{"id": 3, "count": 69417},
+			{"id": 4, "count": 69420},
+			{"id": 5, "count": 69418},
+			{"id": 6, "count": 69417}
+		]
+	},
+	"res_code": 0
+}

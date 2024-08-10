@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/favicon/icon.png" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== SWIPER CSS ===============--> 
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>RollingSky WebEditor 网页编辑器</title>
+
+
+
+
+
+
+
+
+
+    </head>
+    <body>
+
+
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="assets/favicon/ICON2.png" alt="" class="nav__logo-img"> 
+                    RollingSky WebEditor
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">主页</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#celebrate" class="nav__link">Geobuffer查询</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#gift" class="nav__link">其他工具</a>
+                        </li>
+
+                        <!-- <li class="nav__item">
+                            <a href="#new" class="nav__link">New</a>
+                        </li> -->
+
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+
+                    <img src="assets/img/nav-light.png" alt="" class="nav__img">
+                </div>
+                <!-- <div class="nav__btns">
+
+                    <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+                </div> -->
+
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="assets/img/MassifIcon.png" alt="" class="home__img">
+
+
+                    <img src="assets/img/Background1.png" alt="" style=" position: absolute;z-index: -1; background: center no-repeat fixed; border-radius: 25px;box-shadow: -3px 3px 0px 2px rgba(71, 71, 71, 0.1);" class="giving__content">
+
+                    <div class="home__data">
+                        <h1 class="home__title">立即使用 <br> 地编制作器</h1>
+                        <p class="home__description">
+                            更便捷地制作滚动的天空饭制
+                        </p>
+                        <a href="rolling-sky/level-editor/index.html" class="button" target="_blank">Get Started</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== GIVING ====================-->
+            <section class="giving section container">
+                <h2 class="section__title">
+                    开始使用 <br> 地编制作器
+                </h2>
+
+                <div class="giving__container grid">
+                    <div class="giving__content">
+                        <!-- <img src="assets/img/giving1.png" alt="" class="giving__img">
+                        <h3 class="giving__title">Surprise gifts</h3>
+                        <p class="giving__description">They are the best gifts there is.</p> -->
+                    </div>
+
+                    <div class="giving__content">
+                        <img src="assets/img/Editor.png" alt="" class="giving__img">
+                        <h3 class="giving__title">可视化制作地编</h3>
+                        <a class="giving__description button" style="font-size: 10px; margin-top: 20px;" href="rolling-sky/level-editor/index.html" target="_blank">Launch</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--==================== CELEBRATE ====================-->
+            <section class="celebrate section container" id="celebrate">
+                <div class="celebrate__container grid">
+                    <div class="celebrate__data">
+                        <h2 class="section__title celebrate__title">
+                            Geobuffer <br> 查询
+                        </h2>
+                        <p class="celebrate__description">
+                            查找你所需要的地编对应的Geobuffer
+                        </p>
+                        <a href="rolling-sky/tile-lookup/index.html" class="button" target="_blank">Launch</a>
+                    </div>
+
+                    <img src="assets/img/celebrate.png" alt="" class="celebrate__img">
+                </div>
+            </section>
+
+            <!--==================== GIFT ====================-->
+            <section class="gift section container" id="gift">
+                <h2 class="section__title">其他工具</h2>
+
+                <div class="gift__container grid">
+                    <article class="gift__card" style="cursor: pointer;"  onclick="window.open('./rolling-sky/chemistry/index.html','_blank')">
+                        <img src="assets/img/Atom.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+                        
+                        <h3 class="gift__price">元素周期表</h3>
+                        <span class="gift__title">门捷列夫狂喜</span>
+                    </article>
+
+                    <article class="gift__card" onclick="window.open('./rolling-sky/level-encryptor/index.html','_blank')" style="cursor: pointer;">
+                        <img src="assets/img/Encrypt.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+                        
+                        <h3 class="gift__price">地编加密/解密</h3>
+                        <span class="gift__title">默认官方密钥</span>
+                    </article>
+
+                    <article class="gift__card" onclick="window.open('./rolling-sky/colorsets/index.html','_blank')" style="cursor: pointer;">
+                        <img src="assets/img/color.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+                        
+                        <h3 class="gift__price">RGB色彩查询</h3>
+                        <span class="gift__title">游戏内RGB色彩</span>
+                    </article>
+
+                    <article class="gift__card" onclick="window.open('./rolling-sky/theme-generator/index.html','_blank')" style="cursor: pointer;">
+                        <img src="assets/img/theme.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+                        
+                        <h3 class="gift__price">场景编辑器</h3>
+                        <span class="gift__title">编辑你所需要的场景</span>
+                    </article>
+
+                    <article class="gift__card" onclick="window.open('./rolling-sky/thumbnail-maker/index.html','_blank')" style="cursor: pointer;">
+                        <img src="assets/img/cover.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+                        
+                        <h3 class="gift__price">视频封面生成器</h3>
+                        <span class="gift__title">记得准备好你的背景图和封面图...</span>
+                    </article>
+
+                    <article class="gift__card" style="cursor: pointer;" onclick="window.open('https://www.bilibili.com/video/BV1sV411R7Hv/?buvid=XX8DEC08BD4414AFFD4520836B0EA4D409883&from_spmid=search.search-result.0.0&is_story_h5=false&mid=t4uLASU4eOC%2BgxihwJClRg%3D%3D&p=1&plat_id=116&share_from=ugc&share_medium=android&share_plat=android&share_session_id=46d1c317-4054-41e6-9189-12fc7849c331&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1707216259&unique_k=RkiWYlQ&up_id=95412905','_blank')">
+                        <img src="assets/img/otto.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+                        
+                        <h3 class="gift__price">帅,Otto♿!</h3>
+                        <span class="gift__title">卧槽,冰🧊!</span>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
